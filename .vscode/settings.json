@@ -1,0 +1,87 @@
+{
+  "files.autoSave": "onFocusChange",
+  "kite.showWelcomeNotificationOnStartup": false,
+  "editor.tabSize": 2,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.colorTheme": "Night Wolf (gray)",
+  "workbench.startupEditor": "none",
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "editor.wordWrap": "on",
+  "better-comments.tags": [
+
+
+      {
+          "tag": "!",
+          "color": "#FF2D00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+      },
+      {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+      },
+      {
+          "tag": "//",
+          "color": "#474747",
+          "strikethrough": true,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+      },
+      {
+          "tag": "todo",
+          "color": "#FF8C00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+      },
+      {
+          "tag": "*",
+          "color": "#98C379",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+      }
+  ],
+  "editor.tokenColorCustomizations": {
+  
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.useLocalIp": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "explorer.confirmDragAndDrop": false,
+  "[php]": {
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "php.validate.executablePath": "C:/PHP/php.exe",
+  "[less]": {
+      "editor.defaultFormatter": "Wscats.eno"
+  },
+  "compile-hero.less-output-directory": "../css",
+  "less.compile": {
+    "out": "${workspaceRoot}\\src/css\\",
+    "compress": "boolean",
+    
+    
+      
+  
+},
+"liveServer.settings.port": 5501,
+}
