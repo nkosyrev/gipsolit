@@ -69,6 +69,33 @@ button, input, a, textarea {
     background-color: darken(@btn-color, 5%);
   }
 }
+/* Оформление форм */
+.form {    
+  /* Поле для ввода */
+  &-input {
+    display: block;
+    margin: 2rem 0;
+    width: 100%;
+    border: 1px solid @border-input;
+    border-radius: 5px;
+    padding: 1.7rem;
+  }
+  /* Подписи к полям */
+  label {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    background-color: @light;
+  }
+  /* Кнопка отправить заявку */
+  &-btn {
+    display: block;
+    width: 100%;
+    height: 5.5rem;
+    font-size: 1.6rem;
+  }
+}
 
 /* Typography */
 section {
@@ -147,31 +174,6 @@ section {
       strong {
         font-size: 1.9rem;
       }
-    }
-    /* Поле для ввода */
-    &-input {
-      display: block;
-      margin: 2rem 0;
-      width: 100%;
-      border: 1px solid @border-input;
-      border-radius: 5px;
-      padding: 1.7rem;
-    }
-    /* Подписи к полям */
-    label {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      padding: 0.5rem;
-      font-size: 1.1rem;
-      background-color: @light;
-    }
-    /* Кнопка отправить заявку */
-    &-btn {
-      display: block;
-      width: 100%;
-      height: 5.5rem;
-      font-size: 1.6rem;
     }
     /* Подпись под кнопкой */
     small {
@@ -311,10 +313,13 @@ section {
     }
   }
 }
-
+.slick-slide {
+  padding-right: 1rem;
+}
 
 /* Секция с отзывами */
 .feedback {
+  position: relative;
   background: url(../img/feedback/feedback-bg.jpg) no-repeat center;
   background-size: cover;
   &-prev-btn {
@@ -370,6 +375,84 @@ section {
       }
     }
   }
+  /* Форма обратной связи */
+  &-form {
+    margin-top: 5rem;
+    padding: 4rem 10rem;
+    background-color: @light;
+    text-align: center;
+    h3 {
+      margin-bottom: 1rem;
+      .bold();
+      font-size: 2rem;
+    }
+    label {
+      transform: translate(-50%, 8px);
+    }
+  }
+  &-btn {
+    max-width: 30rem;
+    margin: auto;
+  }
+}
+.hand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 30rem;
+}
+
+/* Схема работы */
+.scheme {
+  background: #fff url(../img/scheme-bg.png) bottom -10rem right -15rem no-repeat;
+  background-size: 65rem;
+  &-block {
+    min-height: 30rem;
+    h3 {
+      font-size: 2rem;
+      .bold();
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* Все на 100% включено */
+.all-inclusive {
+  background: @bg-light;
+  .d-flex {
+    align-items: baseline;
+    min-height: 9rem;
+    h4 {
+      .bold();
+      font-size: 1.6rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+.circle {
+  display: inline-block;
+  background-color: @icons-color;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  &-border {
+    display: inline-block;
+    width: 5rem;
+    height: 5rem;
+    padding: 0.3rem;
+    border: 2px solid @icons-color;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 4rem;
+    color: @light;
+    .bold();
+    font-size: 1.9rem;
+  }
 }
 /* Оформление модальных окон */
 .popup {
@@ -413,7 +496,33 @@ section {
   }
 }
 
-
+@media (max-width: 1199px) {
+  .feedback {
+    &-form {
+      padding: 3rem 5rem;
+    }
+    .fotorama {
+      margin-bottom: 3rem;
+    }
+  }
+  .all-inclusive {
+    .d-flex {
+      min-height: 10rem;
+    }
+  }
+}
+@media (max-width: 1070px) {
+  .feedback {
+    &-form {
+      label {
+        transform: translate(-50%, 30%);
+      }
+    }
+  }
+  .hand {
+    display: none;
+  }
+}
 @media (max-width: 991px) {
   .main {
     background-position: top right;
@@ -449,6 +558,9 @@ section {
 @media (max-width: 767px) {
   .main {
     background-position: top left;
+    h1 {
+      font-size: 2.5rem;
+    }
   }
   .header {
     margin-bottom: 14rem;
@@ -457,14 +569,26 @@ section {
   .wrap-block {
     text-align: center;
   }
-}
-@media (max-width: 530px) {
-  .main-content h1 {
-    font-size: 2.1rem;
+  .features {
+    &-block {
+      p {
+        width: 60%;
+      }
+    }
   }
-}
-@media (max-width: 380px) {
-  .main-form-btn {
-    padding: 0;
+  .feedback {
+    &-prev-btn {
+      left: 0;
+    }
+    &-next-btn {
+      right: 0;
+    }
+  }
+  .scheme {
+    background: none;
+    text-align: center;
+    &-block {
+      min-height: auto;
+    }
   }
 }
