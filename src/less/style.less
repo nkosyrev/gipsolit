@@ -506,11 +506,37 @@ section {
       }
     }
     &_good {
+      border-color: @icons-color;
       ul li:before {
         background: url(../img/problems/checked-symbol.svg) center no-repeat;
         background-size: 70%;
       }
     }
+  }
+}
+
+/* Материалы */
+.materials {
+  background: @light url(../img/materials/materials-bg.jpg) center no-repeat;
+  background-size: cover;
+  &-slider {
+    padding-top: 5rem;
+  }
+  &-link {
+    text-decoration: none;
+    color: @icons-color;
+    border-bottom: 1px dotted @icons-color;
+    &:hover {
+      color: darken(@icons-color,10%);
+    }
+  }
+  &-offer {
+    margin-top: 4rem;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
   }
 }
 
