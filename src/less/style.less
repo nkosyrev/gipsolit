@@ -607,6 +607,27 @@ section {
   }
 }
 
+/* Оформление подвала */
+footer {
+  padding: 4rem 0;
+}
+.footer {
+  &-contacts {
+    text-align: center;
+    padding-top: 0.5rem;
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+  }
+  &-dev-logo {
+    text-align: right;
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
 
 
 /* Оформление модальных окон */
@@ -724,6 +745,24 @@ section {
   .tour {
     background: none;
     background-color: @bg-light;
+  }
+  .contacts {
+    background: none;
+    background-color: @bg-light;
+    &-form {
+      margin-top: 3rem;
+    }
+  }
+  footer {
+    text-align: center;
+  }
+  .footer {
+    &-contacts {
+      margin: 2rem 0;
+    }
+    &-dev-logo {
+      text-align: center;
+    }
   }
 }
 
